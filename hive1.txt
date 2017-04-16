@@ -1,0 +1,5 @@
+Create a table named temperature_data inside custom having below fields: 1. date (mm-dd-yyyy) format 2. zip code 3. temperature The table will be loaded from comma-delimited file. Load the dataset.txt (which is ',' delimited) in the table
+
+create table temprature_data(date_format timestamp, zipcode bigint, temprature float) row format delimited fields terminated by ',' stored as textfile;
+load data local inpath '/home/jayant/Downloads/dataset.txt' into table temprature_data;
+
